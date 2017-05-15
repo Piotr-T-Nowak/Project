@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     Button generateButton;
     TextView result;
+    TextView result2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         generateButton = (Button) findViewById(R.id.generate_button);
         result = (TextView) findViewById(R.id.result);
         result.setText("oczekuje na wynik");
+        result2 = (TextView) findViewById(R.id.result2)
+        result2.setText("oczekuje na wynmik");
         generateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
