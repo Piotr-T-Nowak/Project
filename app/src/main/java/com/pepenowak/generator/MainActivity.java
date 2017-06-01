@@ -1,5 +1,6 @@
 package com.pepenowak.generator;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button generateButton;
     TextView result;
     TextView result2;
-
+    Button nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +25,25 @@ public class MainActivity extends AppCompatActivity {
         generateButton = (Button) findViewById(R.id.generate_button);
         result = (TextView) findViewById(R.id.result);
         result.setText("oczekuje na wynik");
-        result2 = (TextView) findViewById(R.id.result2)
+        result2 = (TextView) findViewById(R.id.result2);
         result2.setText("oczekuje na wynmik");
+        nextButton = (Button) findViewById(R.id.next);
+
         generateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("MainActivity", "Button clicked");
                 Random generator = new Random();
-                result.setText("" + generator.nextInt(6));
+                result.setText("" + generator.nextInt(6) + 1);
+                result2.setText("" + (generator.nextInt(6) + 1));
+            }
+        });
+
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
             }
         });
 

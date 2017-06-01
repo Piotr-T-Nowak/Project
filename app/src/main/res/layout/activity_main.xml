@@ -15,10 +15,11 @@
         android:text="Generate" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
         android:text="Result:" />
 
     <TextView
@@ -29,5 +30,35 @@
         android:textSize="30sp"
         android:textColor="@android:color/black"
         tools:text="4"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="12dp"
+        android:text="Result 2" />
+
+    <TextView
+        android:id="@+id/result2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:textColor="@android:color/black"
+        tools:text="4"
+        />
+
+    <!-- Zmien na Linear Layout (gravity nie w Button, tylko...?)-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next" />
+
+    </LinearLayout>
 
 </LinearLayout>
